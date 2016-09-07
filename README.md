@@ -9,9 +9,11 @@ If you found this, and decide to use it, be aware that his is a POC/WIP and is s
 
 ## ToDo
 
-[] - Move to Gradle instead of jar (if possible)
-[] - helper methods to make requests
-[] - how to create listeners & callbacks
+- [ ] Move to Gradle instead of jar (if possible)
+- [x] Helper methods to make requests
+- [ ] How to create listeners & callbacks
+- [ ] POST/PATCH/DELETE requests
+
 
 ## Installation
 
