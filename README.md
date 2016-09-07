@@ -1,12 +1,17 @@
 # motion-android-volley
 
-**WORK IN PROGRESS** If you found this, and decide to use it, be aware that his is a POC/WIP and is still in progress, API might change.
+
+# **WORK IN PROGRESS**
+
+If you found this, and decide to use it, be aware that his is a POC/WIP and is still in progress, API might change.
 
 * Based on examples from RubyMotionSamples and other examples from the internet
 
 ## ToDo
 
 [] - Move to Gradle instead of jar (if possible)
+[] - helper methods to make requests
+[] - how to create listeners & callbacks
 
 ## Installation
 
@@ -20,7 +25,41 @@ And then execute:
 
 ## Usage
 
-TODO: Write usage instructions here
+
+### Array (array of objects)
+```ruby
+url = "http://jsonplaceholder.typicode.com/posts"
+
+# error_listener and success_listener are optional
+# One-line helper
+requests = MotionVolley::Request.new.json_array(url, activity, self, success_listener, error_listener)
+
+# Or you can do it the "normal way" (this is an example used inside a Fragment)
+# `self` means Fragment (Fragment, ListFragment...)
+# `activity` the activity (MainActivity) this fragment belongs to, where the queue is going to be attached.
+
+success_listener = MotionVolley::RequestListener.new self
+error_listener   = MotionVolley::OnError.new
+get = MotionVolley::JsonArrayRequest.build(url, success_listener, error_listener)
+MotionVolley::Queue.build(activity).add(get)
+```
+
+
+## JsonObjetRequest
+```ruby
+url = 'http://jsonplaceholder.typicode.com/posts/12'
+
+# one-line Helper
+requests = MotionVolley::Request.new.json(:get, url, activity, self, nil, success_listener, error_listener)
+
+# Calling the classes
+success_listener = MotionVolley::RequestListener.new self
+error_listener   = MotionVolley::OnError.new
+get = MotionVolley::JsonObjectRequest.build(:get, url, success_listener, error_listener)
+MotionVolley::Queue.build(activity).add(get)
+```
+
+
 
 ## Contributing
 

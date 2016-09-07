@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Alejandro Hoyos"]
   spec.email         = ["alejandro@dezarrolla.com"]
   spec.description   = "[POC] Small wrapper around Volley lib for android"
+  spec.summary       = "[POC] Small wrapper around Volley lib for android"
   spec.homepage      = ""
   spec.license       = ""
 
