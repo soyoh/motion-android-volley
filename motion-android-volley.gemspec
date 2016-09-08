@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 
-VERSION = "0.0.1"
+VERSION = "0.0.3"
 
 Gem::Specification.new do |spec|
   spec.name          = "motion-android-volley"
