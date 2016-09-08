@@ -16,13 +16,7 @@ If you found this, and decide to use it, be aware that his is a POC/WIP and is s
 
 ### Prerequisite
 
-This gem uses [motion-gradle](https://github.com/HipByte/motion-gradle) to manage the Java dependencies, so you need to have Gradle installed. For full details, see the [motion-gradle README](https://github.com/HipByte/motion-gradle), but the basics are:
-
-```shell
-brew install gradle
-```
-
-then install `Extras/Android Support Repository` with the Android SDK Manager.
+This gem uses [motion-gradle](https://github.com/HipByte/motion-gradle) to manage the Java dependencies, so you need to have Gradle installed. For details, see the [motion-gradle README](https://github.com/HipByte/motion-gradle)
 
 ## Installation
 
